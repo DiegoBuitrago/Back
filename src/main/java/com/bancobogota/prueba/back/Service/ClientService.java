@@ -1,7 +1,7 @@
-package com.bancobogota.prueba.back.Service;
+package com.bancobogota.prueba.back.service;
 
 import com.bancobogota.prueba.back.models.entity.Client;
 
 public interface ClientService {
-    Client findByDocumentNumberAndDocumentType(Long documentNumber, String documentType);
+    Client findByDocumentNumberAndDocumentType(String documentNumber, String documentType);
 }

@@ -1,6 +1,7 @@
 package com.bancobogota.prueba.back.models.entity;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,14 +15,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Data
+@Entity
 @Table(name = "client")
 public class Client {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "document_number", nullable = false, unique = true)
     private Long documentNumber;
-    @Column(name = "typeDocument", length = 2)
-    private String typeDocument;
+    @Column(name = "document_type", length = 1)
+    private String documentType;
     @Column(name = "firstName", length = 20)
     private String firstName;
     @Column(name = "middleName", length = 20)

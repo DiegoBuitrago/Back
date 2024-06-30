@@ -1,2 +1,2 @@
 INSERT INTO CLIENT (document_number, document_type, first_name, middle_name, last_name, second_last_name, phone, address, city)
-VALUES ('23445322', 'C', 'Juan', 'Carlos', 'Perez', 'Gomez', '1234567890', 'Calle 123 #45-67', 'Bogotá');
+VALUES (23445322, 'C', 'Juan', 'Carlos', 'Perez', 'Gomez', '1234567890', 'Calle 123 #45-67', 'Bogotá');
