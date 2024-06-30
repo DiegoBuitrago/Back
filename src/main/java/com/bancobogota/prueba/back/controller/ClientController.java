@@ -22,8 +22,8 @@ public class ClientController {
     @GetMapping("/client")
     public ResponseEntity<?> getClientInfo(@RequestParam String documentType, @RequestParam String documentNumber) {
         logger.info("Received request for: client, documentType: {} and documentNumber: {}", documentType, documentNumber);
-        
         Client client = clientServiceImpl.findByDocumentNumberAndDocumentType(documentNumber, documentType);
+        logger.info("Client found: {}", client);
         return new ResponseEntity<>(ClientResponse.builder().firstName(client.getFirstName()).middleName(client.getMiddleName()).lastName(client.getLastName()).secondLastName(client.getSecondLastName()).phone(client.getPhone()).address(client.getAddress()).city(client.getCity()).build(), HttpStatus.OK);
     }
 }
