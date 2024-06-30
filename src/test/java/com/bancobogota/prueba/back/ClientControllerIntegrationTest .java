@@ -13,7 +13,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.bancobogota.prueba.back.models.entity.Client;
 import com.bancobogota.prueba.back.repository.ClientRepository;
 
 @SpringBootTest
