@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,7 @@ import com.bancobogota.prueba.back.models.entity.Client;
 import com.bancobogota.prueba.back.service.ClientServiceImpl;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class ClientController {
     private static final Logger logger = LoggerFactory.getLogger(ClientController.class);
     @Autowired
